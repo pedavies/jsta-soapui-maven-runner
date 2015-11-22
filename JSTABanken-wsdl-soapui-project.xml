@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ee7b9939-3bbd-4252-819b-af714cb3ca72" activeEnvironment="Default" name="JSTABanken?wsdl" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="Testa banken"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export JUnit Results with test properties" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="66a8db4f-12bd-406d-aa6b-a5d465a9eee5" wsaVersion="NONE" name="JSTABankenImplServiceSoapBinding" type="wsdl" bindingName="{http://banken.jsta.se/}JSTABankenImplServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/JSTABanken?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/JSTABanken?wsdl"><con:part><con:url>http://localhost:8080/JSTABanken?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="JSTABankenImplService" targetNamespace="http://banken.jsta.se/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://banken.jsta.se/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://banken.jsta.se/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="Customer" type="tns:customer"/>
+      <xs:element name="createCustomer" type="tns:createCustomer"/>
+      <xs:element name="createCustomerResponse" type="tns:createCustomerResponse"/>
+      <xs:element name="getBalance" type="tns:getBalance"/>
+      <xs:element name="getBalanceResponse" type="tns:getBalanceResponse"/>
+      <xs:element name="getCustomers" type="tns:getCustomers"/>
+      <xs:element name="getCustomersResponse" type="tns:getCustomersResponse"/>
+      <xs:element name="getCustomersSecure" type="tns:getCustomersSecure"/>
+      <xs:element name="getCustomersSecureResponse" type="tns:getCustomersSecureResponse"/>
+      <xs:element name="insertMoney" type="tns:insertMoney"/>
+      <xs:element name="insertMoneyResponse" type="tns:insertMoneyResponse"/>
+      <xs:element name="robTheBank" type="tns:robTheBank"/>
+      <xs:element name="robTheBankResponse" type="tns:robTheBankResponse"/>
+      <xs:element name="sayHi" type="tns:sayHi"/>
+      <xs:element name="sayHiResponse" type="tns:sayHiResponse"/>
+      <xs:element name="withdrawMoney" type="tns:withdrawMoney"/>
+      <xs:element name="withdrawMoneyResponse" type="tns:withdrawMoneyResponse"/>
+      <xs:complexType name="createCustomer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createCustomerResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="customer">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="balance" type="xs:float"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCustomers">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getCustomersResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBalance">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getBalanceResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCustomersSecure">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getCustomersSecureResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sayHi">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sayHiResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="insertMoney">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="amount" type="xs:float"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="insertMoneyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="robTheBank">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="robTheBankResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="withdrawMoney">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element name="amount" type="xs:float"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="withdrawMoneyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CustomerExistsFault" type="tns:CustomerExistsFault"/>
+      <xs:complexType name="CustomerExistsFault">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="NoCustomerFound" type="tns:NoCustomerFound"/>
+      <xs:complexType name="NoCustomerFound">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AuthenticationException" type="tns:AuthenticationException"/>
+      <xs:complexType name="AuthenticationException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="resolvedObj" type="xs:anyType"/>
+          <xs:element minOccurs="0" name="explanation" type="xs:string"/>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="InsufficientBalanceFault" type="tns:InsufficientBalanceFault"/>
+      <xs:complexType name="InsufficientBalanceFault">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createCustomerResponse">
+    <wsdl:part element="tns:createCustomerResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="robTheBankResponse">
+    <wsdl:part element="tns:robTheBankResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createCustomer">
+    <wsdl:part element="tns:createCustomer" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CustomerExistsFault">
+    <wsdl:part element="tns:CustomerExistsFault" name="CustomerExistsFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomers">
+    <wsdl:part element="tns:getCustomers" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AuthenticationException">
+    <wsdl:part element="tns:AuthenticationException" name="AuthenticationException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomersSecure">
+    <wsdl:part element="tns:getCustomersSecure" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sayHiResponse">
+    <wsdl:part element="tns:sayHiResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="withdrawMoneyResponse">
+    <wsdl:part element="tns:withdrawMoneyResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sayHi">
+    <wsdl:part element="tns:sayHi" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomersSecureResponse">
+    <wsdl:part element="tns:getCustomersSecureResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="robTheBank">
+    <wsdl:part element="tns:robTheBank" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="withdrawMoney">
+    <wsdl:part element="tns:withdrawMoney" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="InsufficientBalanceFault">
+    <wsdl:part element="tns:InsufficientBalanceFault" name="InsufficientBalanceFault"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBalance">
+    <wsdl:part element="tns:getBalance" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomersResponse">
+    <wsdl:part element="tns:getCustomersResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertMoneyResponse">
+    <wsdl:part element="tns:insertMoneyResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="NoCustomerFound">
+    <wsdl:part element="tns:NoCustomerFound" name="NoCustomerFound"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="insertMoney">
+    <wsdl:part element="tns:insertMoney" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBalanceResponse">
+    <wsdl:part element="tns:getBalanceResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="JSTABanken">
+    <wsdl:operation name="createCustomer">
+      <wsdl:input message="tns:createCustomer" name="createCustomer"></wsdl:input>
+      <wsdl:output message="tns:createCustomerResponse" name="createCustomerResponse"></wsdl:output>
+      <wsdl:fault message="tns:CustomerExistsFault" name="CustomerExistsFault"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomers">
+      <wsdl:input message="tns:getCustomers" name="getCustomers"></wsdl:input>
+      <wsdl:output message="tns:getCustomersResponse" name="getCustomersResponse"></wsdl:output>
+      <wsdl:fault message="tns:NoCustomerFound" name="NoCustomerFound"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBalance">
+      <wsdl:input message="tns:getBalance" name="getBalance"></wsdl:input>
+      <wsdl:output message="tns:getBalanceResponse" name="getBalanceResponse"></wsdl:output>
+      <wsdl:fault message="tns:NoCustomerFound" name="NoCustomerFound"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomersSecure">
+      <wsdl:input message="tns:getCustomersSecure" name="getCustomersSecure"></wsdl:input>
+      <wsdl:output message="tns:getCustomersSecureResponse" name="getCustomersSecureResponse"></wsdl:output>
+      <wsdl:fault message="tns:AuthenticationException" name="AuthenticationException"></wsdl:fault>
+      <wsdl:fault message="tns:NoCustomerFound" name="NoCustomerFound"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sayHi">
+      <wsdl:input message="tns:sayHi" name="sayHi"></wsdl:input>
+      <wsdl:output message="tns:sayHiResponse" name="sayHiResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMoney">
+      <wsdl:input message="tns:insertMoney" name="insertMoney"></wsdl:input>
+      <wsdl:output message="tns:insertMoneyResponse" name="insertMoneyResponse"></wsdl:output>
+      <wsdl:fault message="tns:NoCustomerFound" name="NoCustomerFound"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="robTheBank">
+      <wsdl:input message="tns:robTheBank" name="robTheBank"></wsdl:input>
+      <wsdl:output message="tns:robTheBankResponse" name="robTheBankResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="withdrawMoney">
+      <wsdl:input message="tns:withdrawMoney" name="withdrawMoney"></wsdl:input>
+      <wsdl:output message="tns:withdrawMoneyResponse" name="withdrawMoneyResponse"></wsdl:output>
+      <wsdl:fault message="tns:InsufficientBalanceFault" name="InsufficientBalanceFault"></wsdl:fault>
+      <wsdl:fault message="tns:NoCustomerFound" name="NoCustomerFound"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="JSTABankenImplServiceSoapBinding" type="tns:JSTABanken">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createCustomer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createCustomer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createCustomerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="CustomerExistsFault">
+        <soap:fault name="CustomerExistsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCustomers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCustomersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NoCustomerFound">
+        <soap:fault name="NoCustomerFound" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBalance">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getBalance">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBalanceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NoCustomerFound">
+        <soap:fault name="NoCustomerFound" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomersSecure">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCustomersSecure">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCustomersSecureResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="AuthenticationException">
+        <soap:fault name="AuthenticationException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NoCustomerFound">
+        <soap:fault name="NoCustomerFound" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sayHi">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sayHi">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sayHiResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertMoney">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="insertMoney">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="insertMoneyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="NoCustomerFound">
+        <soap:fault name="NoCustomerFound" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="robTheBank">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="robTheBank">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="robTheBankResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="withdrawMoney">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="withdrawMoney">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="withdrawMoneyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="InsufficientBalanceFault">
+        <soap:fault name="InsufficientBalanceFault" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="NoCustomerFound">
+        <soap:fault name="NoCustomerFound" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JSTABankenImplService">
+    <wsdl:port binding="tns:JSTABankenImplServiceSoapBinding" name="JSTABankenImplPort">
+      <soap:address location="http://localhost:8080/JSTABanken"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint></con:endpoints><con:operation id="7c1a66ab-f24e-4f76-88ea-573c48296ef1" isOneWay="false" action="" name="createCustomer" bindingOperationName="createCustomer" type="Request-Response" outputName="createCustomerResponse" inputName="createCustomer" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="573914ea-add2-47a2-ac4d-7ea9365a1a43" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:createCustomer>
+         <!--Optional:-->
+         <name>saad</name>
+      </ban:createCustomer>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/createCustomer"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b6951549-8e42-48a9-a48a-94d3be0042a7" isOneWay="false" action="" name="getBalance" bindingOperationName="getBalance" type="Request-Response" outputName="getBalanceResponse" inputName="getBalance" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cc4e7686-0b18-405a-b1ef-5ef35fd7ec49" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:getBalance>
+         <!--Optional:-->
+         <name>saad</name>
+      </ban:getBalance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/getBalance"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="71f7bae8-7eba-4abf-af43-ba7abaee375a" isOneWay="false" action="" name="getCustomers" bindingOperationName="getCustomers" type="Request-Response" outputName="getCustomersResponse" inputName="getCustomers" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6e87a4b9-832d-4d53-af65-422f2f42a6b1" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/" xmlns:SOAP-ENV="SOAP-ENV">
+   <soapenv:Header>
+      <h:BasicAuth SOAP-ENV:mustUnderstand="1" xmlns:h="http://soap-authentication.org/basic/2001/10/">
+         <Name>system</Name>
+         <Password>password1</Password>
+      </h:BasicAuth>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ban:getCustomers/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/getCustomers"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="068b434c-2b8a-418d-a68a-a4f5967d37cd" isOneWay="false" action="" name="insertMoney" bindingOperationName="insertMoney" type="Request-Response" outputName="insertMoneyResponse" inputName="insertMoney" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="03d18350-21c5-4c09-bae0-c1ff70cbfb79" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:insertMoney>
+         <!--Optional:-->
+         <name>?</name>
+         <amount>?</amount>
+      </ban:insertMoney>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/insertMoney"/></con:call></con:operation><con:operation id="a60c0aae-c06a-490e-8b98-1d486335df41" isOneWay="false" action="" name="robTheBank" bindingOperationName="robTheBank" type="Request-Response" outputName="robTheBankResponse" inputName="robTheBank" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a81bec63-b8c3-4a0f-93ba-33ca5be9552b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:robTheBank/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/robTheBank"/></con:call></con:operation><con:operation id="10e6c6cc-49af-4ddc-8b93-087b262694ad" isOneWay="false" action="" name="sayHi" bindingOperationName="sayHi" type="Request-Response" outputName="sayHiResponse" inputName="sayHi" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="860ab130-e092-4d66-afd8-ccca6dd4942e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:sayHi>
+         <!--Optional:-->
+         <arg0>?</arg0>
+      </ban:sayHi>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/sayHi"/></con:call></con:operation><con:operation id="35e6e0ea-011a-4945-8aeb-0adce820eb66" isOneWay="false" action="" name="withdrawMoney" bindingOperationName="withdrawMoney" type="Request-Response" outputName="withdrawMoneyResponse" inputName="withdrawMoney" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e1160c33-7ecc-4593-ac2d-b115f61e682e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:withdrawMoney>
+         <!--Optional:-->
+         <name>?</name>
+         <amount>?</amount>
+      </ban:withdrawMoney>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/withdrawMoney"/></con:call></con:operation><con:operation id="d9ce4a28-7608-4517-9515-c363aeb1418f" isOneWay="false" action="" name="getCustomersSecure" bindingOperationName="getCustomersSecure" type="Request-Response" outputName="getCustomersSecureResponse" inputName="getCustomersSecure" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="22121d41-5d64-448b-99fc-932ca9f16799" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/" xmlns:SOAP-ENV="SOAP-ENV">
+   <soapenv:Header>
+      <h:BasicAuth SOAP-ENV:mustUnderstand="1" xmlns:h="http://soap-authentication.org/basic/2001/10/">
+         <Name>system</Name>
+         <Password>password</Password>
+      </h:BasicAuth>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ban:getCustomersSecure/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/getCustomersSecure"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="5297b689-77af-4a66-8d45-53871fbc5db5" name="Testa banken"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="1597dcbc-c0ce-4ea0-b058-315ab4170435" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Testa get balance" searchProperties="true"><con:settings/><con:testStep type="request" id="387a95d9-38e9-43e9-8459-6a96f6c3b46b" name="Skapa kund"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>JSTABankenImplServiceSoapBinding</con:interface><con:operation>createCustomer</con:operation><con:request name="Skapa kund" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="449d8806-0ecb-4431-a64c-e8fd9d45a8a4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:createCustomer>
+         <!--Optional:-->
+         <name>saad</name>
+      </ban:createCustomer>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f382a9ea-e022-4548-a996-cf9b7eb4436f" name="SOAP Response"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/createCustomer"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" id="c58db528-8eda-412b-8102-ed257db3f7ad" name="get balance"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>JSTABankenImplServiceSoapBinding</con:interface><con:operation>getBalance</con:operation><con:request name="get balance" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="0f62d352-1d92-43dc-9c5d-eae471777400"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ban:getBalance>
+         <!--Optional:-->
+         <name>saad</name>
+      </ban:getBalance>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="b95f1fe0-4ff7-4c3a-aaf7-dee3dc2534c4" name="SOAP Response"/><con:assertion type="SOAP Fault Assertion" id="cafa8ada-8a45-407d-9beb-f303e928cb6b" name="Not SOAP Fault"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/getBalance"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="9016dcd5-f429-4807-9f56-bc6b34f3ed18" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Testa get customers" searchProperties="true"><con:settings/><con:testStep type="request" id="353ab4cd-7068-4ab1-ae8a-d5a0781ced51" name="getCustomers - Request 1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>JSTABankenImplServiceSoapBinding</con:interface><con:operation>getCustomers</con:operation><con:request name="getCustomers - Request 1" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="308056bf-cec6-48e8-8f77-f683418c7639"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/JSTABanken</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ban="http://banken.jsta.se/" xmlns:SOAP-ENV="SOAP-ENV">
+   <soapenv:Header>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ban:getCustomers/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ee054c9c-c03b-43c3-8135-6c18bfd3e59e" name="SOAP Response"/><con:assertion type="Schema Compliance" id="e75de728-99d0-475a-8a68-77eebdc93e20" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" id="e54e8786-348b-41af-bf2a-d03b2860bfbf" name="Not SOAP Fault"/><con:assertion type="Simple Contains" id="b51f7f49-59a2-49bd-9957-97d4189841ab" name="Contains"><con:configuration><token>&lt;name>saad&lt;/name>
+</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://banken.jsta.se/JSTABanken/getCustomers"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
