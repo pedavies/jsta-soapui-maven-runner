@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>se.jsta</groupId>
+	<artifactId>maven-soapui-runner-example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Maven SoapUI runner example</name>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>smartbear-sweden-plugin-repository</id>
+			<url>http://www.soapui.org/repository/maven2/</url>
+		</pluginRepository>
+	</pluginRepositories>
+	  <build>
+	<plugins>
+		<plugin>
+			<groupId>com.smartbear.soapui</groupId>
+			<artifactId>soapui-maven-plugin</artifactId>
+			<version>5.1.3</version>
+			<configuration>
+				<projectFile>${filetorun}</projectFile>
+				<projectProperties>
+					<value>message=Hello World!</value>
+				</projectProperties>
+			</configuration>
+		</plugin>
+	</plugins>
+	  </build>
+</project>
