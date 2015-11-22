@@ -22,6 +22,11 @@
 				<projectProperties>
 					<value>message=Hello World!</value>
 				</projectProperties>
+				<outputFolder>${project.build.directory}/surefire-reports</outputFolder>
+              <junitReport>true</junitReport>
+              <exportAll>true</exportAll>
+              <printReport>true</printReport>
+              <testFailIgnore>true</testFailIgnore>
 			</configuration>
 		</plugin>
 	</plugins>
