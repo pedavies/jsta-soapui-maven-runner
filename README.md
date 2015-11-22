@@ -10,7 +10,7 @@ För att köra tester utan SoapUI installerat med maven:
 
 Hur man kör med SoapUI runner utan maven:
 
-<SoapUI Home>/java/app/bin/testrunner.sh -r -a -j -J \<SoapUI-projekt-filsökväg\>
+\<SoapUI Home\>/java/app/bin/testrunner.sh -r -a -j -J \<SoapUI-projekt-filsökväg\>
 
 Gå till http://jsta.se för kurser i SoapUI och testautomatisering
 
@@ -26,6 +26,6 @@ To run tests without SoapUI installed with maven:
  
 How to run with SoapUI runner without maven:
 
-<SoapUI Home>/java/app/bin/testrunner.sh -r -a -j -J \<SoapUI-projekt-filsökväg\>
+\<SoapUI Home\>/java/app/bin/testrunner.sh -r -a -j -J \<SoapUI-projekt-filsökväg\>
 
 Visit http://jsta.se for cources in SoapUI and test automation
