@@ -20,7 +20,8 @@
 			<configuration>
 				<projectFile>${filetorun}</projectFile>
 				<projectProperties>
-					<value>message=Hello World!</value>
+					<value>dbPath=${dbpath}</value>
+					<value>connectionString=${connectionstring}</value>
 				</projectProperties>
 				<outputFolder>${project.build.directory}/surefire-reports</outputFolder>
               <junitReport>true</junitReport>
