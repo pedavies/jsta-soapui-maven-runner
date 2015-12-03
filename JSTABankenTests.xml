@@ -750,6 +750,6 @@ def accEnvironment = "Rickard-Dator:8088"
 * Propertyn skapas om den inte finns innan körning.
 */
 PropertyExpansionUtils.globalProperties.setPropertyValue("server-port", sysEnvironment)
-PropertyExpansionUtils.globalProperties.setPropertyValue("dbPath", "c:/soapuikurs/jstabanken.db")
-PropertyExpansionUtils.globalProperties.setPropertyValue("connectionString", "jdbc:sqlite:/c:/soapuikurs/jstabanken.db")
-PropertyExpansionUtils.globalProperties.setPropertyValue("driver", "com.eviware.soapui.support.GroovyUtils.registerJdbcDriver")</con:afterLoadScript><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+//PropertyExpansionUtils.globalProperties.setPropertyValue("dbPath", "c:/soapuikurs/jstabanken.db")
+//PropertyExpansionUtils.globalProperties.setPropertyValue("connectionString", "jdbc:sqlite:/c:/soapuikurs/jstabanken.db")
+//PropertyExpansionUtils.globalProperties.setPropertyValue("driver", "com.eviware.soapui.support.GroovyUtils.registerJdbcDriver")</con:afterLoadScript><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
