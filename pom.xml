@@ -19,10 +19,10 @@
 			<version>5.1.3</version>
 			<configuration>
 				<projectFile>${filetorun}</projectFile>
-				<projectProperties>
+				<globalProperties>
 					<value>dbPath=${dbpath}</value>
 					<value>connectionString=${connectionstring}</value>
-				</projectProperties>
+				</globalProperties>
 				<outputFolder>${project.build.directory}/surefire-reports</outputFolder>
               <junitReport>true</junitReport>
               <exportAll>true</exportAll>
