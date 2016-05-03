@@ -7,6 +7,12 @@ För att köra tester utan SoapUI installerat med maven:
 
 2. Kör testerna genom att exekvera: mvn com.smartbear.soapui:soapui-maven-plugin:5.1.3:test "-Dfiletorun=\<SoapUI-projektets filnamn\>"
 
+exempel: 
+mvn com.smartbear.soapui:soapui-maven-plugin:5.1.3:test 
+"-Dfiletorun=JSTABankenTests.xml"
+"-Ddbpath=c:/soapuikurs/jstabanken.db"
+"-Dconnectionstring="jdbc:sqlite:/c:/soapuikurs/jstabanken.db"
+
 
 Hur man kör med SoapUI runner utan maven:
 
